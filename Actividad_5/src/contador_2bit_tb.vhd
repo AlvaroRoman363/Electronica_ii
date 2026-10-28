@@ -6,6 +6,7 @@ use std.env.finish;
 entity contador_2bit_tb is
 end contador_2bit_tb;
 architecture tb of contador_2bit_tb is
+    constant periodo : time := 10 ns;
     signal reset,hab,clk : std_logic;
     signal cuenta : std_logic_vector(1 downto 0);
 begin
@@ -13,8 +14,8 @@ begin
     gen_clk: process is
     begin
         clk <= '0';
-        wait for 10 ns;
+        wait for periodo/2;
         clk <= '1';
-        wait for 10 ns;
-    end process gen_clk;
+        wait for periodo/2;
+    end process;--gen_cte
 end tb;
