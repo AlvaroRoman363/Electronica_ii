@@ -1,4 +1,0 @@
-v 4
-file . "ejemplo.vhd" "4bd0fa37825d416de68888519c88ba899cd041e3" "20261102181934.259":
-  entity ejemplo at 1( 0) + 0 on 11;
-  architecture arch of ejemplo at 12( 182) + 0 on 12;
