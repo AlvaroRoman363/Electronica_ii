@@ -1,5 +1,6 @@
 library Ieee; 
 use Ieee.std_logic_1164.all; 
+use std.env.finish;
 entity contador_semaforo_tb is 
 end entity contador_semaforo_tb; architecture arch of contador_semaforo_tb is 
     -- Señales de estímulo 
@@ -55,6 +56,7 @@ begin
         S_NS <= '0'; 
         -- 5\. Señal de emergencia en Este-Oeste 
         E_EO <= '1'; wait for 30 ns; 
-        E_EO <= '0'; wait for 40 ns; wait; 
+        E_EO <= '0'; wait for 40 ns; 
+        finish; 
     end process; 
 end architecture arch;
